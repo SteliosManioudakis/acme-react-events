@@ -1,0 +1,22 @@
+{
+  "app.title": "City Events",
+  "app.searchPlaceholder": "Search events",
+  "app.thisMonth": "This month",
+  "app.noResults": "No events match your search.",
+  "app.footer": "Tickets are non-refundable.",
+  "app.language": "Language",
+  "event.jazz.title": "Jazz in the park",
+  "event.market.title": "Night market",
+  "event.run.title": "Harbour run",
+  "card.soldOut": "Sold out",
+  "card.seatsLeft": "{count, plural, one {# seat left} other {# seats left}}",
+  "card.book": "Book",
+  "card.bookTooltip": "Book a seat for this event",
+  "booking.title": "Book a seat",
+  "booking.nameLabel": "Your name",
+  "booking.namePlaceholder": "First and last name",
+  "booking.confirm": "Confirm booking",
+  "booking.cancel": "Cancel",
+  "booking.success": "Thanks, {name}! Your seat for {event} is booked.",
+  "booking.close": "Close"
+}

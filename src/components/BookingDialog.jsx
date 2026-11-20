@@ -1,26 +1,34 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function BookingDialog({ event, onClose }) {
+  const { t } = useTranslation();
   const [name, setName] = useState('');
   const [done, setDone] = useState(false);
 
   if (done) {
     return (
       <div className="dialog">
-        <p>{`Thanks, ${name}! Your seat for ${event.title} is booked.`}</p>
-        <button onClick={onClose}>Close</button>
+        <p>{t('booking.success', { name, event: event.title })}</p>
+        <button onClick={onClose}>{t('booking.close')}</button>
       </div>
     );
   }
   return (
     <div className="dialog">
-      <h3>Book a seat</h3>
+      <h3>{t('booking.title')}</h3>
       <label>
-        Your name
-        <input value={name} onChange={(change) => setName(change.target.value)} placeholder="First and last name" />
+        {t('booking.nameLabel')}
+        <input
+          value={name}
+          onChange={(change) => setName(change.target.value)}
+          placeholder={t('booking.namePlaceholder')}
+        />
       </label>
-      <button disabled={!name} onClick={() => setDone(true)}>Confirm booking</button>
-      <button onClick={onClose}>Cancel</button>
+      <button disabled={!name} onClick={() => setDone(true)}>
+        {t('booking.confirm')}
+      </button>
+      <button onClick={onClose}>{t('booking.cancel')}</button>
     </div>
   );
 }
